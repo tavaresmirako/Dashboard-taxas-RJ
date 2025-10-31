@@ -40,11 +40,10 @@ Se tiver alguma dúvida ou quiser se conectar, pode me encontrar em:
   <img src="https://img.shields.io/badge/Dashboard--taxas--RJ-Abrir-blue?style=for-the-badge&logo=streamlit" alt="Abrir Dashboard Taxas RJ" />
 </a>
 
-![Captura de tela 2025-09-13 225248](https://github.com/user-attachments/assets/c80dea8c-65c7-49ef-a6a2-56f642af4172)
+
 
 ## 🎥 Demonstração em vídeo
-📽️ Veja o projeto em funcionamento: [Clique aqui para assistir ao vídeo](https://raw.githubusercontent.com/tavaresmirako/Dashboard-taxas-RJ/master/video/video-dashboar.mp4)
-
+📽️ Veja o projeto em funcionamento: 
 
 
 
