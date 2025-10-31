@@ -3,82 +3,634 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Taxas RJ</title>
+    <title>Dashboard Taxas RJ - Análise de Impostos Municipais</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+        * {
             margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-            color: #333;
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #2C3E50;
+            background-color: #FFFFFF;
+        }
+
+        /* Header e Navegação */
+        header {
+            background: linear-gradient(135deg, #0047AB 0%, #003580 100%);
+            color: #FFFFFF;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 71, 171, 0.1);
+        }
+
         .container {
-            max-width: 800px;
-            margin: auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
-        h1 {
-            color: #007bff;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 10px;
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
         }
-        h2 {
-            color: #555;
-            margin-top: 20px;
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0047AB 0%, #003580 50%, #00A86B 100%);
+            color: #FFFFFF;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
         .btn {
-            display: inline-block;
-            background: #28a745;
-            color: #fff;
-            padding: 10px 20px;
-            margin: 5px 0;
+            padding: 12px 30px;
             border-radius: 5px;
             text-decoration: none;
-            transition: background 0.3s;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
         }
-        .btn:hover {
-            background: #218838;
+
+        .btn-primary {
+            background-color: #FFB81C;
+            color: #0047AB;
         }
-        .tech-list {
+
+        .btn-primary:hover {
+            background-color: #FFC93D;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 184, 28, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #FFFFFF;
+            border: 2px solid #FFFFFF;
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background-color: #F8F9FA;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 800;
+            font-family: 'Montserrat', sans-serif;
+            color: #0047AB;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: #FFFFFF;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s;
+            border-left: 5px solid #0047AB;
+        }
+
+        .feature-card:nth-child(2) {
+            border-left-color: #00A86B;
+        }
+
+        .feature-card:nth-child(3) {
+            border-left-color: #FFB81C;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 71, 171, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: #0047AB;
+        }
+
+        .feature-card:nth-child(2) .feature-icon {
+            color: #00A86B;
+        }
+
+        .feature-card:nth-child(3) .feature-icon {
+            color: #FFB81C;
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #0047AB;
+        }
+
+        .feature-card:nth-child(2) h3 {
+            color: #00A86B;
+        }
+
+        .feature-card:nth-child(3) h3 {
+            color: #FFB81C;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* Technologies Section */
+        .technologies {
+            padding: 80px 0;
+            background-color: #FFFFFF;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .tech-item {
+            background: #F8F9FA;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #E8E8E8;
+            transition: all 0.3s;
+        }
+
+        .tech-item:hover {
+            border-color: #0047AB;
+            background: #F0F4FF;
+        }
+
+        .tech-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .tech-item h4 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #0047AB;
+        }
+
+        .tech-item p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Data Section */
+        .data-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #F8F9FA 0%, #E8F5E9 100%);
+        }
+
+        .data-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .data-text h2 {
+            font-size: 32px;
+            font-weight: 800;
+            font-family: 'Montserrat', sans-serif;
+            color: #0047AB;
+            margin-bottom: 20px;
+        }
+
+        .data-text p {
+            font-size: 16px;
+            color: #2C3E50;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .cities-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .city-item {
+            background: #FFFFFF;
+            padding: 12px 15px;
+            border-radius: 5px;
+            border-left: 4px solid #00A86B;
+            font-weight: 500;
+            color: #2C3E50;
+        }
+
+        .data-image {
+            background: #FFFFFF;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 71, 171, 0.1);
+        }
+
+        .data-image img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #0047AB 0%, #003580 100%);
+            color: #FFFFFF;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 36px;
+            font-weight: 800;
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1A1A1A;
+            color: #FFFFFF;
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .footer-section h4 {
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #FFB81C;
+        }
+
+        .footer-section ul {
             list-style: none;
-            padding: 0;
         }
-        .tech-list li {
-            background: #e9ecef;
-            margin: 5px 0;
-            padding: 8px;
-            border-left: 5px solid #007bff;
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            color: #FFFFFF;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #00A86B;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            background: #00A86B;
+            border-radius: 50%;
+            color: #FFFFFF;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #FFB81C;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            font-size: 14px;
+            color: #999;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .data-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>📊 Dashboard Taxas das Cidades do Rio de Janeiro/RJ</h1>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-chart-bar"></i>
+                    Dashboard Taxas RJ
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#features">Recursos</a></li>
+                    <li><a href="#technologies">Tecnologias</a></li>
+                    <li><a href="#data">Dados</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        <p>Este projeto é um **Dashboard Interativo** criado para visualizar e analisar dados simulados de taxas municipais, como IPTU e Taxa de Serviços, em diversas cidades do estado do Rio de Janeiro.</p>
-        
-        <p>O objetivo é demonstrar a capacidade de visualização de dados e análise comparativa utilizando ferramentas modernas de desenvolvimento em Python.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>📊 Dashboard Taxas RJ</h1>
+            <p>Análise Interativa de Impostos Municipais do Rio de Janeiro</p>
+            <div class="cta-buttons">
+                <a href="https://github.com/tavaresmirako/Dashboard-taxas-RJ" class="btn btn-primary">
+                    <i class="fab fa-github"></i> Ver no GitHub
+                </a>
+                <a href="#features" class="btn btn-secondary">Saiba Mais</a>
+            </div>
+        </div>
+    </section>
 
-        <h2>Tecnologias Utilizadas</h2>
-        <ul class="tech-list">
-            <li><strong>Python:</strong> Linguagem de programação principal.</li>
-            <li><strong>Streamlit:</strong> Framework para a construção do dashboard interativo.</li>
-            <li><strong>Pandas:</strong> Biblioteca essencial para manipulação e análise dos dados.</li>
-            <li><strong>Plotly Express:</strong> Utilizado para a criação de gráficos dinâmicos e visualmente atraentes.</li>
-        </ul>
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Recursos Principais</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-table"></i></div>
+                    <h3>Tabela de Dados</h3>
+                    <p>Visualize todos os dados de IPTU, Taxa de Serviços e Total de Impostos em uma tabela interativa e bem organizada.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-city"></i></div>
+                    <h3>Detalhes por Cidade</h3>
+                    <p>Selecione qualquer cidade do Rio de Janeiro para visualizar seus dados específicos de impostos municipais.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Gráficos Comparativos</h3>
+                    <p>Compare IPTU e Taxa de Serviços entre cidades com gráficos dinâmicos e visualmente atraentes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-bar-chart"></i></div>
+                    <h3>Estatísticas</h3>
+                    <p>Análise estatística descritiva com médias, distribuições e visualizações de boxplot.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Interface Responsiva</h3>
+                    <p>Acesse o dashboard em qualquer dispositivo - desktop, tablet ou smartphone.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-code"></i></div>
+                    <h3>Código Aberto</h3>
+                    <p>Código-fonte disponível no GitHub para contribuições e melhorias contínuas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <h2>Autor e Repositório</h2>
-        <p>Este projeto foi adaptado e publicado por **tavaresmirako**, baseado no projeto original de Leandro Timóteo (Dashboard-taxas-SP).</p>
+    <!-- Technologies Section -->
+    <section class="technologies" id="technologies">
+        <div class="container">
+            <h2 class="section-title">Stack Tecnológico</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <div class="tech-icon">🐍</div>
+                    <h4>Python</h4>
+                    <p>Linguagem de programação robusta e versátil para análise de dados.</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">⚡</div>
+                    <h4>Streamlit</h4>
+                    <p>Framework para criar dashboards interativos com Python de forma rápida.</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">📊</div>
+                    <h4>Pandas</h4>
+                    <p>Biblioteca essencial para manipulação e análise de dados estruturados.</p>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">📈</div>
+                    <h4>Plotly Express</h4>
+                    <p>Ferramenta para criar gráficos interativos e visualmente impressionantes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <a href="https://github.com/tavaresmirako/Dashboard-taxas-RJ" class="btn" target="_blank">Ver Repositório no GitHub</a>
-        <a href="https://tavaresmirako.github.io/Dashboard-taxas-RJ/" class="btn" target="_blank">Acessar Dashboard (Link do GitHub Pages)</a>
+    <!-- Data Section -->
+    <section class="data-section" id="data">
+        <div class="container">
+            <div class="data-content">
+                <div class="data-text">
+                    <h2>Cidades Analisadas</h2>
+                    <p>O Dashboard-taxas-RJ inclui as principais cidades do Estado do Rio de Janeiro, com dados simulados de IPTU médio e taxas de serviços.</p>
+                    <p>Os dados permitem comparações significativas entre municípios da região metropolitana e interior do estado.</p>
+                    <div class="cities-list">
+                        <div class="city-item">🏙️ Rio de Janeiro</div>
+                        <div class="city-item">🏙️ Niterói</div>
+                        <div class="city-item">🏙️ São Gonçalo</div>
+                        <div class="city-item">🏙️ Duque de Caxias</div>
+                        <div class="city-item">🏙️ Nova Iguaçu</div>
+                        <div class="city-item">🏙️ Petrópolis</div>
+                        <div class="city-item">🏙️ Campos dos Goytacazes</div>
+                        <div class="city-item">🏙️ Volta Redonda</div>
+                    </div>
+                </div>
+                <div class="data-image">
+                    <img src="/home/ubuntu/dashboard_cover.png" alt="Dashboard Preview">
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <h2>Observação</h2>
-        <p>O dashboard em si é uma aplicação Streamlit e precisa ser executado localmente ou em um serviço de hospedagem específico para Streamlit. O link do GitHub Pages acima será ativado após a configuração na próxima etapa.</p>
-    </div>
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <h2>Pronto para Explorar?</h2>
+            <p>Acesse o Dashboard-taxas-RJ agora e descubra insights sobre a carga tributária do Rio de Janeiro.</p>
+            <div class="cta-buttons">
+                <a href="https://github.com/tavaresmirako/Dashboard-taxas-RJ" class="btn btn-primary">
+                    Acessar Repositório
+                </a>
+                <a href="https://tavaresmirako.github.io/Dashboard-taxas-RJ/" class="btn btn-secondary">
+                    Página de Apresentação
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Sobre o Projeto</h4>
+                    <p>Dashboard-taxas-RJ é uma ferramenta interativa para análise de impostos municipais do Rio de Janeiro, desenvolvida com Python e Streamlit.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="https://github.com/tavaresmirako/Dashboard-taxas-RJ">GitHub</a></li>
+                        <li><a href="https://tavaresmirako.github.io/Dashboard-taxas-RJ/">Página Web</a></li>
+                        <li><a href="https://github.com/tavaresmirako">Perfil GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Tecnologias</h4>
+                    <ul>
+                        <li><a href="https://www.python.org/">Python</a></li>
+                        <li><a href="https://streamlit.io/">Streamlit</a></li>
+                        <li><a href="https://pandas.pydata.org/">Pandas</a></li>
+                        <li><a href="https://plotly.com/">Plotly</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/tavaresmirako" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dashboard-taxas-RJ. Desenvolvido por <strong>tavaresmirako</strong>. Baseado no projeto original de Leandro Timóteo.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
