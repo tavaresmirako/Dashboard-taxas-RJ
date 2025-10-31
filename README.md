@@ -25,11 +25,11 @@ O dashboard será aberto no seu navegador.
 
 Se tiver alguma dúvida ou quiser se conectar, pode me encontrar em:
 
-* *** E-mail: [Seu e-mail aqui]
-* ** LinkedIn: [Seu LinkedIn aqui])
-* *** WhatsApp: [Seu WhatsApp aqui]
+* *** E-mail: [tavaresmirako@gmail.com]
+* ** LinkedIn: [https://www.linkedin.com/in/thiago-tavares-6328936a/])
+* *** WhatsApp: [21-992115015]
 
-# Autor: tavaresmirako (Baseado no projeto de Leandro Timóteo)
+# Autor: tavaresmirako 
 [![AUR License](https://img.shields.io/aur/license/LICENSE)](https://github.com/LeandroTimoteo/Projeto-dashboard-de-taxas/blob/master/LICENSE)
 
 ![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=500&color=32CD32&center=true&vCenter=true&width=800&lines=%F0%9F%94%90+Autenticando+Usu%C3%A1rio...;%F0%9F%9B%A0%EF%B8%8F+Dashboard-taxas-das-Cidades+do+Rio+de+Janeiro)
