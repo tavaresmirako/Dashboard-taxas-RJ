@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Por Que Visualizar a Carga Tributária</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #FFFFFF;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #FFFFFF;
+            padding: 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .accent-shape {
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 300px;
+            height: 300px;
+            background: #00A86B;
+            transform: rotate(45deg);
+            z-index: 1;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 5;
+        }
+        .image-container img {
+            width: 100%;
+            max-width: 420px;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 8px 20px rgba(0, 71, 171, 0.12));
+        }
+        .content {
+            z-index: 10;
+        }
+        .title {
+            font-size: 32px;
+            font-weight: 800;
+            color: #0047AB;
+            margin: 0 0 15px 0;
+            line-height: 1.2;
+        }
+        .accent-line {
+            width: 60px;
+            height: 5px;
+            background: #FFB81C;
+            margin-bottom: 25px;
+            border-radius: 3px;
+        }
+        .body-text {
+            font-size: 16px;
+            color: #2C3E50;
+            line-height: 1.8;
+            margin: 0;
+            margin-bottom: 18px;
+        }
+        .highlight {
+            color: #0047AB;
+            font-weight: 700;
+        }
+        .accent-text {
+            color: #00A86B;
+            font-weight: 600;
+        }
+        .benefit-item {
+            font-size: 15px;
+            color: #2C3E50;
+            margin: 12px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        .benefit-item::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #FFB81C;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="accent-shape"></div>
+        
+        <div class="image-container">
+            <img src="/home/ubuntu/data_analysis.png" alt="Data Analysis">
+        </div>
+        
+        <div class="content">
+            <h1 class="title">Por Que Visualizar a Carga Tributária</h1>
+            <div class="accent-line"></div>
+            
+            <p class="body-text">
+                A compreensão clara dos impostos municipais é <span class="highlight">essencial</span> para cidadãos, gestores públicos e pesquisadores.
+            </p>
+            
+            <p class="body-text">
+                O <span class="accent-text">Dashboard-taxas-RJ</span> oferece uma visão comparativa e intuitiva dos principais impostos entre municípios, transformando dados complexos em insights visuais.
+            </p>
+            
+            <div style="margin-top: 30px;">
+                <div class="benefit-item">Comparação transparente entre cidades</div>
+                <div class="benefit-item">Identificação de padrões tributários</div>
+                <div class="benefit-item">Suporte a decisões informadas</div>
+                <div class="benefit-item">Ferramenta educacional interativa</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

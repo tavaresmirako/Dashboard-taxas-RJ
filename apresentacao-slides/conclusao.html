@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conclusão: Inovação em Visualização de Dados</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #FFFFFF;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            overflow: hidden;
+            position: relative;
+            padding: 60px;
+        }
+        .geometric-accent-top {
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 400px;
+            height: 400px;
+            background: #00A86B;
+            clip-path: polygon(0 0, 100% 0, 100% 100%);
+            z-index: 1;
+        }
+        .geometric-accent-bottom {
+            position: absolute;
+            bottom: -80px;
+            right: -80px;
+            width: 350px;
+            height: 350px;
+            background: #FFB81C;
+            clip-path: polygon(0 0, 100% 0, 100% 100%);
+            z-index: 1;
+        }
+        .content-left {
+            z-index: 10;
+            flex: 1;
+            padding-right: 40px;
+        }
+        .title {
+            font-size: 32px;
+            font-weight: 800;
+            color: #0047AB;
+            line-height: 1.2;
+            margin: 0 0 20px 0;
+            letter-spacing: -0.5px;
+        }
+        .accent-line {
+            width: 60px;
+            height: 5px;
+            background: #00A86B;
+            margin-bottom: 25px;
+            border-radius: 3px;
+        }
+        .main-message {
+            font-size: 18px;
+            color: #2C3E50;
+            line-height: 1.7;
+            margin: 0 0 25px 0;
+            font-weight: 500;
+        }
+        .highlight {
+            color: #0047AB;
+            font-weight: 700;
+        }
+        .accent-text {
+            color: #00A86B;
+            font-weight: 600;
+        }
+        .achievements {
+            margin: 30px 0;
+        }
+        .achievement-item {
+            font-size: 15px;
+            color: #2C3E50;
+            margin: 12px 0;
+            padding-left: 25px;
+            position: relative;
+            line-height: 1.6;
+        }
+        .achievement-item::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #00A86B;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .cta-section {
+            margin-top: 35px;
+            padding-top: 25px;
+            border-top: 2px solid #FFB81C;
+        }
+        .cta-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #FFB81C;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0 0 15px 0;
+        }
+        .link-item {
+            font-size: 15px;
+            color: #0047AB;
+            font-weight: 600;
+            margin: 10px 0;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        .link-item::before {
+            content: "→";
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        .image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 5;
+        }
+        .image-container img {
+            width: 100%;
+            max-width: 480px;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 10px 30px rgba(0, 71, 171, 0.15));
+        }
+        .footer-message {
+            font-size: 13px;
+            color: #666;
+            margin-top: 25px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="geometric-accent-top"></div>
+        <div class="geometric-accent-bottom"></div>
+        
+        <div class="content-left">
+            <h1 class="title">Conclusão: Inovação em Visualização de Dados</h1>
+            <div class="accent-line"></div>
+            
+            <p class="main-message">
+                O <span class="highlight">Dashboard-taxas-RJ</span> demonstra a capacidade de <span class="accent-text">adaptação criativa</span> e visualização eficaz de dados complexos.
+            </p>
+            
+            <div class="achievements">
+                <div class="achievement-item">Transformação de dados simulados em insights visuais significativos</div>
+                <div class="achievement-item">Estrutura modular que permite análise sob múltiplas perspectivas</div>
+                <div class="achievement-item">Ferramenta educacional e prática para análise tributária municipal</div>
+                <div class="achievement-item">Base sólida para expansão com dados reais e funcionalidades avançadas</div>
+            </div>
+            
+            <div class="cta-section">
+                <p class="cta-title">Acesse o Projeto</p>
+                <div class="link-item">GitHub: tavaresmirako/Dashboard-taxas-RJ</div>
+                <div class="link-item">Página: tavaresmirako.github.io/Dashboard-taxas-RJ</div>
+            </div>
+            
+            <p class="footer-message">
+                Baseado no trabalho original de Leandro Timóteo. Obrigado por acompanhar esta apresentação!
+            </p>
+        </div>
+        
+        <div class="image-container">
+            <img src="/home/ubuntu/dashboard_cover.png" alt="Dashboard Final">
+        </div>
+    </div>
+</body>
+</html>

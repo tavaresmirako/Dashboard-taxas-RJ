@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Próximos Passos e Melhorias Futuras</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #FFFFFF;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #FFFFFF;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        .accent-shape-top {
+            position: absolute;
+            top: -60px;
+            left: -60px;
+            width: 250px;
+            height: 250px;
+            background: #0047AB;
+            clip-path: polygon(100% 0, 100% 100%, 0 100%);
+            z-index: 1;
+        }
+        .accent-shape-bottom {
+            position: absolute;
+            bottom: -80px;
+            right: -80px;
+            width: 300px;
+            height: 300px;
+            background: #FFB81C;
+            transform: rotate(45deg);
+            z-index: 1;
+        }
+        .header {
+            z-index: 10;
+            margin-bottom: 40px;
+        }
+        .title {
+            font-size: 32px;
+            font-weight: 800;
+            color: #0047AB;
+            margin: 0 0 15px 0;
+            line-height: 1.2;
+        }
+        .accent-line {
+            width: 60px;
+            height: 5px;
+            background: #00A86B;
+            border-radius: 3px;
+            margin-bottom: 25px;
+        }
+        .subtitle {
+            font-size: 16px;
+            color: #2C3E50;
+            line-height: 1.6;
+            margin: 0;
+            max-width: 800px;
+        }
+        .content {
+            z-index: 10;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            flex: 1;
+        }
+        .step-item {
+            display: flex;
+            flex-direction: column;
+        }
+        .step-number {
+            font-size: 48px;
+            font-weight: 800;
+            color: #FFB81C;
+            margin: 0;
+            line-height: 1;
+        }
+        .step-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #0047AB;
+            margin: 10px 0 8px 0;
+        }
+        .step-description {
+            font-size: 15px;
+            color: #2C3E50;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .step-item:nth-child(1) .step-number {
+            color: #00A86B;
+        }
+        .step-item:nth-child(2) .step-number {
+            color: #0047AB;
+        }
+        .step-item:nth-child(3) .step-number {
+            color: #FFB81C;
+        }
+        .step-item:nth-child(4) .step-number {
+            color: #00A86B;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="accent-shape-top"></div>
+        <div class="accent-shape-bottom"></div>
+        
+        <div class="header">
+            <h1 class="title">Próximos Passos e Melhorias Futuras</h1>
+            <div class="accent-line"></div>
+            <p class="subtitle">O projeto é uma base sólida para futuras expansões e refinamentos estratégicos.</p>
+        </div>
+        
+        <div class="content">
+            <div class="step-item">
+                <p class="step-number">01</p>
+                <h3 class="step-title">Dados Reais</h3>
+                <p class="step-description">Integração com fontes de dados oficiais de prefeituras e órgãos fiscais para análise baseada em informações verificadas.</p>
+            </div>
+            
+            <div class="step-item">
+                <p class="step-number">02</p>
+                <h3 class="step-title">Mapas Interativos</h3>
+                <p class="step-description">Adicionar visualizações geográficas para contextualizar dados municipais no mapa do Rio de Janeiro.</p>
+            </div>
+            
+            <div class="step-item">
+                <p class="step-number">03</p>
+                <h3 class="step-title">Hospedagem Profissional</h3>
+                <p class="step-description">Publicar o dashboard em plataformas como Streamlit Cloud ou Heroku para acesso contínuo e escalável.</p>
+            </div>
+            
+            <div class="step-item">
+                <p class="step-number">04</p>
+                <h3 class="step-title">Manutenção Contínua</h3>
+                <p class="step-description">Atualizar dependências regularmente e refinar a interface do usuário com base em feedback.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

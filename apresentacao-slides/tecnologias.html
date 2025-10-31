@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack Tecnológico: Python e Ferramentas Modernas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #FFFFFF;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #FFFFFF;
+            padding: 60px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .accent-shape-bottom {
+            position: absolute;
+            bottom: -50px;
+            right: -50px;
+            width: 350px;
+            height: 350px;
+            background: #FFB81C;
+            clip-path: polygon(0 0, 100% 0, 100% 100%);
+            z-index: 1;
+        }
+        .content {
+            z-index: 10;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .title {
+            font-size: 32px;
+            font-weight: 800;
+            color: #0047AB;
+            margin: 0 0 15px 0;
+            line-height: 1.2;
+        }
+        .accent-line {
+            width: 60px;
+            height: 5px;
+            background: #00A86B;
+            margin-bottom: 25px;
+            border-radius: 3px;
+        }
+        .intro-text {
+            font-size: 16px;
+            color: #2C3E50;
+            line-height: 1.7;
+            margin-bottom: 35px;
+            max-width: 900px;
+        }
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            flex: 1;
+        }
+        .tech-card {
+            background: #F8F9FA;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            border-left: 6px solid #0047AB;
+            position: relative;
+        }
+        .tech-card:nth-child(2) {
+            border-left-color: #00A86B;
+        }
+        .tech-card:nth-child(3) {
+            border-left-color: #FFB81C;
+        }
+        .tech-icon {
+            font-size: 14px;
+            font-weight: 800;
+            color: #FFFFFF;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+        }
+        .tech-card:nth-child(1) .tech-icon {
+            background: #0047AB;
+        }
+        .tech-card:nth-child(2) .tech-icon {
+            background: #00A86B;
+        }
+        .tech-card:nth-child(3) .tech-icon {
+            background: #FFB81C;
+        }
+        .tech-name {
+            font-size: 20px;
+            font-weight: 800;
+            color: #0047AB;
+            margin: 0 0 12px 0;
+        }
+        .tech-card:nth-child(2) .tech-name {
+            color: #00A86B;
+        }
+        .tech-card:nth-child(3) .tech-name {
+            color: #FFB81C;
+        }
+        .tech-description {
+            font-size: 14px;
+            color: #2C3E50;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .tech-feature {
+            font-size: 13px;
+            color: #2C3E50;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #E0E0E0;
+            display: flex;
+            align-items: flex-start;
+        }
+        .tech-feature::before {
+            content: "▸";
+            margin-right: 8px;
+            font-weight: bold;
+            color: #0047AB;
+        }
+        .tech-card:nth-child(2) .tech-feature::before {
+            color: #00A86B;
+        }
+        .tech-card:nth-child(3) .tech-feature::before {
+            color: #FFB81C;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="accent-shape-bottom"></div>
+        
+        <div class="content">
+            <h1 class="title">Stack Tecnológico: Python e Ferramentas Modernas</h1>
+            <div class="accent-line"></div>
+            
+            <p class="intro-text">
+                O projeto utiliza o <strong>ecossistema Python</strong> para criar uma experiência de visualização de dados rica, acessível e interativa. Três bibliotecas principais formam o coração da aplicação.
+            </p>
+            
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon">ST</div>
+                    <h3 class="tech-name">Streamlit</h3>
+                    <p class="tech-description">Framework principal que transforma scripts Python em dashboards interativos com facilidade, sem necessidade de conhecimento em web development.</p>
+                    <div class="tech-feature">Desenvolvimento ágil de aplicações</div>
+                    <div class="tech-feature">Interface responsiva e moderna</div>
+                </div>
+                
+                <div class="tech-card">
+                    <div class="tech-icon">PD</div>
+                    <h3 class="tech-name">Pandas</h3>
+                    <p class="tech-description">Biblioteca essencial para manipulação, limpeza e estruturação dos dados municipais, permitindo análises complexas e transformações eficientes.</p>
+                    <div class="tech-feature">Processamento de dados eficiente</div>
+                    <div class="tech-feature">Análises estatísticas avançadas</div>
+                </div>
+                
+                <div class="tech-card">
+                    <div class="tech-icon">PX</div>
+                    <h3 class="tech-name">Plotly Express</h3>
+                    <p class="tech-description">Biblioteca utilizada para gerar gráficos dinâmicos e visualmente atraentes, como gráficos de barras, boxplots e comparações interativas.</p>
+                    <div class="tech-feature">Visualizações interativas</div>
+                    <div class="tech-feature">Gráficos responsivos e elegantes</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

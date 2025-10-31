@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodologia de Dados e Simulação</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #FFFFFF;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #FFFFFF;
+            padding: 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: flex-start;
+            position: relative;
+            overflow: hidden;
+        }
+        .accent-shape {
+            position: absolute;
+            bottom: -100px;
+            right: -100px;
+            width: 350px;
+            height: 350px;
+            background: #FFB81C;
+            clip-path: polygon(100% 0, 100% 100%, 0 100%);
+            z-index: 1;
+        }
+        .content {
+            z-index: 10;
+            padding-top: 20px;
+        }
+        .title {
+            font-size: 32px;
+            font-weight: 800;
+            color: #0047AB;
+            margin: 0 0 15px 0;
+            line-height: 1.2;
+        }
+        .accent-line {
+            width: 60px;
+            height: 5px;
+            background: #00A86B;
+            margin-bottom: 25px;
+            border-radius: 3px;
+        }
+        .body-text {
+            font-size: 15px;
+            color: #2C3E50;
+            line-height: 1.7;
+            margin: 0;
+            margin-bottom: 16px;
+        }
+        .highlight {
+            color: #0047AB;
+            font-weight: 700;
+        }
+        .accent-text {
+            color: #00A86B;
+            font-weight: 600;
+        }
+        .data-table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+        .data-table th {
+            background: #0047AB;
+            color: #FFFFFF;
+            padding: 10px;
+            text-align: left;
+            font-size: 13px;
+            font-weight: 700;
+        }
+        .data-table td {
+            padding: 8px 10px;
+            font-size: 13px;
+            color: #2C3E50;
+            border-bottom: 1px solid #E8E8E8;
+        }
+        .data-table tr:nth-child(even) {
+            background: #F9F9F9;
+        }
+        .metric-item {
+            font-size: 14px;
+            color: #2C3E50;
+            margin: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        .metric-item::before {
+            content: "◆";
+            position: absolute;
+            left: 0;
+            color: #FFB81C;
+            font-size: 12px;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            z-index: 5;
+            padding-top: 40px;
+        }
+        .image-container img {
+            width: 100%;
+            max-width: 380px;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 8px 20px rgba(0, 71, 171, 0.12));
+        }
+        .note {
+            font-size: 13px;
+            color: #666;
+            font-style: italic;
+            margin-top: 20px;
+            padding: 12px;
+            border-left: 3px solid #00A86B;
+            background: #F5F5F5;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="accent-shape"></div>
+        
+        <div class="content">
+            <h1 class="title">Metodologia de Dados e Simulação</h1>
+            <div class="accent-line"></div>
+            
+            <p class="body-text">
+                Os dados utilizados são <span class="highlight">simulados</span> mas refletem fielmente a estrutura de comparação do projeto original.
+            </p>
+            
+            <p class="body-text" style="margin-bottom: 20px;">
+                <span class="accent-text">Cidades Incluídas:</span>
+            </p>
+            
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Município</th>
+                        <th>Região</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Rio de Janeiro</td>
+                        <td>Capital</td>
+                    </tr>
+                    <tr>
+                        <td>Niterói</td>
+                        <td>Região Metropolitana</td>
+                    </tr>
+                    <tr>
+                        <td>São Gonçalo</td>
+                        <td>Região Metropolitana</td>
+                    </tr>
+                    <tr>
+                        <td>Duque de Caxias</td>
+                        <td>Região Metropolitana</td>
+                    </tr>
+                    <tr>
+                        <td>Nova Iguaçu</td>
+                        <td>Região Metropolitana</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p class="body-text" style="margin-top: 18px; margin-bottom: 10px;">
+                <span class="accent-text">Métricas Chave:</span>
+            </p>
+            
+            <div class="metric-item">IPTU Médio (em R$)</div>
+            <div class="metric-item">Taxa de Serviços (em R$)</div>
+            <div class="metric-item">Total de Impostos (em R$)</div>
+            
+            <div class="note">
+                ⓘ Os valores são fictícios e servem para fins de demonstração da ferramenta de visualização.
+            </div>
+        </div>
+        
+        <div class="image-container">
+            <img src="/home/ubuntu/python_technology.png" alt="Python Technologies">
+        </div>
+    </div>
+</body>
+</html>

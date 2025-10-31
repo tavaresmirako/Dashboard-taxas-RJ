@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso ao Projeto e Repositório</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #FFFFFF;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #FFFFFF;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        .accent-shape-bottom {
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 350px;
+            height: 350px;
+            background: #FFB81C;
+            clip-path: polygon(100% 0, 100% 100%, 0 100%);
+            z-index: 1;
+        }
+        .header {
+            z-index: 10;
+            margin-bottom: 40px;
+        }
+        .title {
+            font-size: 32px;
+            font-weight: 800;
+            color: #0047AB;
+            margin: 0 0 15px 0;
+            line-height: 1.2;
+        }
+        .accent-line {
+            width: 60px;
+            height: 5px;
+            background: #00A86B;
+            border-radius: 3px;
+            margin-bottom: 25px;
+        }
+        .subtitle {
+            font-size: 15px;
+            color: #2C3E50;
+            line-height: 1.6;
+            margin: 0;
+            max-width: 900px;
+        }
+        .content {
+            z-index: 10;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+            flex: 1;
+            align-items: center;
+        }
+        .access-block {
+            padding: 35px;
+            background: #F8F9FA;
+            border-left: 6px solid #0047AB;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .access-block:nth-child(2) {
+            border-left-color: #00A86B;
+        }
+        .access-icon {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+        .access-title {
+            font-size: 20px;
+            font-weight: 800;
+            color: #0047AB;
+            margin: 0 0 12px 0;
+        }
+        .access-block:nth-child(2) .access-title {
+            color: #00A86B;
+        }
+        .access-description {
+            font-size: 14px;
+            color: #2C3E50;
+            line-height: 1.6;
+            margin: 0 0 18px 0;
+        }
+        .access-link {
+            font-size: 13px;
+            color: #0047AB;
+            font-weight: 700;
+            margin: 0;
+            word-break: break-all;
+            line-height: 1.5;
+        }
+        .access-block:nth-child(2) .access-link {
+            color: #00A86B;
+        }
+        .footer-section {
+            z-index: 10;
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 2px solid #E8E8E8;
+        }
+        .footer-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #0047AB;
+            margin: 0 0 8px 0;
+        }
+        .footer-text {
+            font-size: 14px;
+            color: #2C3E50;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .highlight-text {
+            color: #00A86B;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="accent-shape-bottom"></div>
+        
+        <div class="header">
+            <h1 class="title">Acesso ao Projeto e Repositório</h1>
+            <div class="accent-line"></div>
+            <p class="subtitle">O projeto está disponível em múltiplas plataformas para fácil acesso e colaboração.</p>
+        </div>
+        
+        <div class="content">
+            <div class="access-block">
+                <div class="access-icon">🔗</div>
+                <h3 class="access-title">Repositório GitHub</h3>
+                <p class="access-description">Acesse o código-fonte completo, histórico de commits e contribua com melhorias.</p>
+                <p class="access-link">github.com/tavaresmirako/<br>Dashboard-taxas-RJ</p>
+            </div>
+            
+            <div class="access-block">
+                <div class="access-icon">🌐</div>
+                <h3 class="access-title">Página de Apresentação</h3>
+                <p class="access-description">Visualize a página web de apresentação do projeto hospedada no GitHub Pages.</p>
+                <p class="access-link">tavaresmirako.github.io/<br>Dashboard-taxas-RJ</p>
+            </div>
+        </div>
+        
+        <div class="footer-section">
+            <h4 class="footer-title">Crédito e Origem</h4>
+            <p class="footer-text">
+                Este projeto foi adaptado e recriado por <span class="highlight-text">tavaresmirako</span>, baseado no trabalho original <span class="highlight-text">Dashboard-taxas-SP</span> de <span class="highlight-text">Leandro Timóteo</span>. A migração para o contexto do Rio de Janeiro mantém a estrutura modular e expande as possibilidades de análise tributária regional.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

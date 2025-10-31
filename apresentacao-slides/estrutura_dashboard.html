@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura Modular do Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #FFFFFF;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #FFFFFF;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        .accent-shape {
+            position: absolute;
+            bottom: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: #FFB81C;
+            clip-path: polygon(100% 0, 100% 100%, 0 100%);
+            z-index: 1;
+        }
+        .header {
+            z-index: 10;
+            margin-bottom: 40px;
+        }
+        .title {
+            font-size: 32px;
+            font-weight: 800;
+            color: #0047AB;
+            margin: 0 0 15px 0;
+            line-height: 1.2;
+        }
+        .accent-line {
+            width: 60px;
+            height: 5px;
+            background: #00A86B;
+            border-radius: 3px;
+        }
+        .modules-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 20px;
+            z-index: 10;
+        }
+        .module-card {
+            padding: 25px;
+            border-left: 5px solid #0047AB;
+            background: #F8F9FA;
+            position: relative;
+        }
+        .module-card:nth-child(2) {
+            border-left-color: #00A86B;
+        }
+        .module-card:nth-child(3) {
+            border-left-color: #FFB81C;
+        }
+        .module-card:nth-child(4) {
+            border-left-color: #0047AB;
+        }
+        .module-icon {
+            font-size: 28px;
+            margin-bottom: 12px;
+            height: 35px;
+        }
+        .module-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #0047AB;
+            margin: 0 0 12px 0;
+            line-height: 1.3;
+        }
+        .module-description {
+            font-size: 14px;
+            color: #2C3E50;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .module-card:nth-child(2) .module-title {
+            color: #00A86B;
+        }
+        .module-card:nth-child(3) .module-title {
+            color: #FFB81C;
+        }
+        .module-card:nth-child(4) .module-title {
+            color: #0047AB;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="accent-shape"></div>
+        
+        <div class="header">
+            <h1 class="title">Estrutura Modular do Dashboard</h1>
+            <div class="accent-line"></div>
+        </div>
+        
+        <div class="modules-grid">
+            <div class="module-card">
+                <div class="module-icon">📊</div>
+                <h3 class="module-title">Página Principal</h3>
+                <p class="module-description">Tabela completa de dados e gráfico de barras comparando o Total de Impostos entre todas as cidades.</p>
+            </div>
+            
+            <div class="module-card">
+                <div class="module-icon">🏙️</div>
+                <h3 class="module-title">Detalhes por Cidade</h3>
+                <p class="module-description">Seleção interativa de município para visualizar métricas específicas de IPTU e Taxa de Serviços.</p>
+            </div>
+            
+            <div class="module-card">
+                <div class="module-icon">📈</div>
+                <h3 class="module-title">Comparação de Impostos</h3>
+                <p class="module-description">Gráfico de barras agrupadas mostrando a proporção de IPTU versus Taxa de Serviços em cada cidade.</p>
+            </div>
+            
+            <div class="module-card">
+                <div class="module-icon">📉</div>
+                <h3 class="module-title">Estatísticas Descritivas</h3>
+                <p class="module-description">Médias, distribuição geral dos impostos e análise de boxplot para compreensão estatística.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

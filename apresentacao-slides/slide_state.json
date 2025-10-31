@@ -1,0 +1,92 @@
+{
+  "project_info": {
+    "title": "Dashboard Taxas RJ",
+    "created": 1761888649.1494348,
+    "last_updated": 1761888750.2528515,
+    "total_slides": 10
+  },
+  "slides": {
+    "cover": "edited",
+    "origem_projeto": "edited",
+    "necessidade": "edited",
+    "dados_metodologia": "edited",
+    "tecnologias": "edited",
+    "estrutura_dashboard": "edited",
+    "cidades_dados": "edited",
+    "proximos_passos": "edited",
+    "repositorio_acesso": "edited",
+    "conclusao": "edited"
+  },
+  "outline": [
+    {
+      "id": "cover",
+      "title": "Dashboard Taxas RJ",
+      "summary": "Uma recriação inovadora do projeto original com foco no Estado do Rio de Janeiro, apresentando uma ferramenta interativa para visualização e análise comparativa de impostos municipais.",
+      "image_plan": "/home/ubuntu/rio_de_janeiro_city.png - The project focuses on the State of Rio de Janeiro (RJ). Image 2 is a stylized depiction of Rio de Janeiro (Christ the Redeemer, Sugarloaf Mountain), making it highly relevant for the title slide.",
+      "slide_template_key": ""
+    },
+    {
+      "id": "origem_projeto",
+      "title": "A Origem e Evolução do Projeto",
+      "summary": "Clonagem e adaptação do Dashboard-taxas-SP de Leandro Timóteo, migrando dados e análise para as principais cidades do Rio de Janeiro com foco em visualização interativa de IPTU e taxas de serviços.",
+      "image_plan": "/home/ubuntu/dashboard_cover.png - This slide discusses the need for visualizing the tax burden and the main objective of the project, which is to provide an interactive tool for visualization and comparison. Image 1 is a clean, modern example of a data dashboard, which directly reflects the project's output.",
+      "slide_template_key": ""
+    },
+    {
+      "id": "necessidade",
+      "title": "Por Que Visualizar a Carga Tributária",
+      "summary": "A compreensão clara dos impostos municipais é essencial para cidadãos e gestores públicos. O Dashboard-taxas-RJ oferece uma visão comparativa e intuitiva dos principais impostos entre municípios.",
+      "image_plan": "/home/ubuntu/data_analysis.png - This slide focuses on the data methodology, metrics (IPTU, Taxas), and the use of simulated data. Image 3 shows financial/data reports and charts, which visually represents the concept of data analysis and metrics.",
+      "slide_template_key": ""
+    },
+    {
+      "id": "dados_metodologia",
+      "title": "Metodologia de Dados e Simulação",
+      "summary": "Os dados utilizados são simulados mas refletem a estrutura de comparação do projeto original, incluindo cidades como Rio de Janeiro, Niterói, São Gonçalo, Duque de Caxias e Nova Iguaçu, com métricas de IPTU Médio, Taxa de Serviços e Total de Impostos.",
+      "image_plan": "/home/ubuntu/python_technology.png - This slide explicitly lists the technologies used: Streamlit, Pandas, and Plotly Express. Image 4 is a visual representation of these exact technologies (Python, pandas, Streamlit, Plotly), making it the perfect fit.",
+      "slide_template_key": ""
+    },
+    {
+      "id": "tecnologias",
+      "title": "Stack Tecnológico: Python e Ferramentas Modernas",
+      "summary": "O projeto utiliza Streamlit como framework principal para criar dashboards interativos, Pandas para manipulação de dados e Plotly Express para gerar gráficos dinâmicos e visualmente atraentes.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "estrutura_dashboard",
+      "title": "Estrutura Modular do Dashboard",
+      "summary": "A aplicação oferece múltiplas perspectivas de análise: página principal com tabela e gráficos, detalhes por cidade, comparação de impostos e estatísticas descritivas com distribuição de dados.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "cidades_dados",
+      "title": "Cidades Analisadas e Dados Simulados",
+      "summary": "O dashboard inclui as principais cidades do Rio de Janeiro com dados simulados de IPTU médio e taxas de serviços, permitindo comparações significativas entre municípios da região metropolitana e interior.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "proximos_passos",
+      "title": "Próximos Passos e Melhorias Futuras",
+      "summary": "Integração com dados reais de órgãos fiscais, adição de mapas interativos para contextualização geográfica, hospedagem profissional em plataformas como Streamlit Cloud, e manutenção contínua com atualizações de dependências.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "repositorio_acesso",
+      "title": "Acesso ao Projeto e Repositório",
+      "summary": "O projeto está disponível no GitHub em https://github.com/tavaresmirako/Dashboard-taxas-RJ com página de apresentação em https://tavaresmirako.github.io/Dashboard-taxas-RJ/, baseado no trabalho original de Leandro Timóteo.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "conclusao",
+      "title": "Conclusão: Inovação em Visualização de Dados",
+      "summary": "O Dashboard-taxas-RJ demonstra a capacidade de adaptação, visualização eficaz de dados complexos e a importância de ferramentas interativas para análise tributária municipal no contexto do Rio de Janeiro.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    }
+  ]
+}

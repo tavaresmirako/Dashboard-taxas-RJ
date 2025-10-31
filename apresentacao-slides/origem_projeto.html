@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Origem e Evolução do Projeto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #FFFFFF;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #FFFFFF;
+            padding: 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .accent-shape {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background: #FFB81C;
+            clip-path: polygon(100% 0, 100% 100%, 0 100%);
+            z-index: 1;
+        }
+        .content {
+            z-index: 10;
+        }
+        .title {
+            font-size: 32px;
+            font-weight: 800;
+            color: #0047AB;
+            margin: 0 0 15px 0;
+            line-height: 1.2;
+        }
+        .accent-line {
+            width: 60px;
+            height: 5px;
+            background: #00A86B;
+            margin-bottom: 25px;
+            border-radius: 3px;
+        }
+        .body-text {
+            font-size: 16px;
+            color: #2C3E50;
+            line-height: 1.8;
+            margin: 0;
+            margin-bottom: 15px;
+        }
+        .highlight {
+            color: #0047AB;
+            font-weight: 700;
+        }
+        .accent-text {
+            color: #00A86B;
+            font-weight: 600;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 5;
+        }
+        .image-container img {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 8px 20px rgba(0, 71, 171, 0.12));
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="accent-shape"></div>
+        
+        <div class="content">
+            <h1 class="title">A Origem e Evolução do Projeto</h1>
+            <div class="accent-line"></div>
+            
+            <p class="body-text">
+                O <span class="highlight">Dashboard-taxas-RJ</span> é resultado de uma clonagem estratégica e adaptação criativa do projeto original <span class="highlight">Dashboard-taxas-SP</span> de Leandro Timóteo.
+            </p>
+            
+            <p class="body-text">
+                A migração dos dados e análise para as principais cidades do <span class="accent-text">Estado do Rio de Janeiro</span> permitiu criar uma ferramenta especializada para a região.
+            </p>
+            
+            <p class="body-text">
+                O objetivo principal é fornecer uma <span class="highlight">ferramenta interativa</span> para visualização e comparação de impostos municipais como IPTU Médio e Taxa de Serviços entre os municípios do RJ.
+            </p>
+            
+            <p class="body-text" style="margin-top: 25px; font-size: 15px; font-weight: 600; color: #00A86B;">
+                ✓ Mantém a estrutura modular do projeto original<br>
+                ✓ Adapta dados para contexto regional<br>
+                ✓ Expande possibilidades de análise tributária
+            </p>
+        </div>
+        
+        <div class="image-container">
+            <img src="/home/ubuntu/dashboard_cover.png" alt="Dashboard Interface">
+        </div>
+    </div>
+</body>
+</html>
